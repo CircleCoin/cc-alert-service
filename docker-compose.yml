@@ -1,0 +1,16 @@
+version: '2'
+services:
+  razor:
+    build:
+      context: ./
+    image: tribeca
+    env_file:
+      - ./env
+    links:
+      - tribeca-mongo
+    ports:
+      - "3000:3000"
+    tty: true
+  razor-mongo:
+    image: mongo
+    restart: on-failure
