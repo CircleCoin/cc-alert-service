@@ -9,6 +9,6 @@ RUN npm start
 
 EXPOSE 3000 5000
 
-WORKDIR razor/service
+WORKDIR razor
 
-CMD ["forever", "main.js"]
+CMD ["npm", "start"]
